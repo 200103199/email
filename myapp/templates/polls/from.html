@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<h3>Registered account</h3>
+<form action="" method="post" novalidate>
+    {% csrf_token %}
+    <div>
+        <label for="id_{{ form.name.name }}">name</label>
+        {{ form.name }} <span>{{ form.name.errors.0 }}</span>
+    </div>
+    <div>
+        <label for="id_{{ form.age.name }}">age</label>
+        {{ form.age }} <span>{{ form.age.errors.0 }}</span>
+    </div>
+
+    <div>
+        <label for="id_r_salary">password</label>
+        {{ form.r_salary }} <span>{{ form.r_salary.errors.0 }}{{ clear_errors.0 }}</span>
+    </div>
+    <div>
+        <label for="email">email</label>
+        {{ form.email}} <span>{{form.email.errors.0}}</span>
+    </div>
+    <div>
+        <lebel for="number">phone number</lebel>
+        {{form.number}}<span>{{form.number.errors.0}}</span>
+    </div>
+    <div>
+        <lebel for="country">country</lebel>
+        {{form.country}}<span>{{form.country.errors.0}}</span>
+    </div>
+    <input type="submit">
+</form>
+</body>
+</html>
